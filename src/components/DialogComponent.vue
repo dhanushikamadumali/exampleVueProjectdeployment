@@ -9,8 +9,8 @@
     </v-dialog>
 </template>
 <script>
-import DialogModalComponent from '@/components/DIalogModalComponent.vue';
-export default {
+import DialogModalComponent from '@/components/DialogModalComponent.vue';
+export default{
     data (){
         return{
             openModal:"Open Dialog",
