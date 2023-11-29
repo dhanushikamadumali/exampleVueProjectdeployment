@@ -1,7 +1,7 @@
 <template>
 <div>
+<center> <v-btn color="blue" elevation="12"  @click="emiting()" >Emiting data</v-btn></center>
 
-  <v-btn color="blue" elevation="12"  @click="emiting()" >Emiting data</v-btn>
 </div>
 </template>
 <script>
@@ -16,6 +16,10 @@ export default {
   },
   methods:{
     emiting(){
+      // child to parent data pass karnne emiting walin
+      // "emitingData "->kiyanne massage eka
+      // this.emiting data->data ekaa
+      // this.emitingdata eken massage eka otomaticaly bind karanawa
       this.$emit("emitingData",this.emitingData);
     },
   },

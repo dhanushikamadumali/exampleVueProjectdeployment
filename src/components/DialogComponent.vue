@@ -5,11 +5,11 @@
         </v-btn>
     </div>
     <v-dialog width="500" v-model="dialog">
-       <DialogModalComponent/>
+       <DialogModal/>
     </v-dialog>
 </template>
 <script>
-import DialogModalComponent from '@/components/DialogModalComponent.vue';
+import DialogModal from '@/components/DialogModal.vue';
 export default{
     data (){
         return{
@@ -25,7 +25,7 @@ export default{
         }
     },
     components:{
-        DialogModalComponent,
+        DialogModal,
     },
     methods: {
         openDialog(){

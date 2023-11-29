@@ -8,7 +8,7 @@
                 <v-row>
                     <v-col lg="6" cols="12" sm="6" md="6">
                         <lable class="header_color">first name</lable>
-                        <v-text-field class="pt-2"  variant="outlined" >
+                        <v-text-field class="pt-2"  variant="outlined" v-model="form.firstname" >
 
                         </v-text-field>
                         <!-- {{ Formdata }} -->
@@ -17,7 +17,7 @@
                     </v-col>
                     <v-col lg="6"  cols="12" sm="6" md="6">
                         <lable class="header_color">last name</lable>
-                        <v-text-field class="pt-2"   variant="outlined" ></v-text-field>
+                        <v-text-field class="pt-2"   variant="outlined" v-model="form.lastname" ></v-text-field>
                     </v-col>
                 </v-row>
                 <!-- <v-row>
@@ -47,13 +47,14 @@
 <script>
 
 export default{
+  props:{
+    // FormData:String,
+    FormData:Object,
+
+  },
   data() {
     return {
-      props:{
-        // FormData:String,
-        FormData:Object,
 
-      },
       // hadana object athulata automaticaly ynawa form object ejken
       form:{},
 
@@ -65,6 +66,7 @@ export default{
 
     };
   },
+
 
   methods:{
     // getData(){
@@ -79,9 +81,9 @@ export default{
       // console.log(this.address2)
 
     // },
-getData(){
-  this.$emit("formData",this.FormData)
-}
+  getData(){
+    this.$emit("formData",this.form);
+  }
 
   },
 
